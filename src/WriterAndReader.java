@@ -7,7 +7,6 @@ public class WriterAndReader {
 
     public void write(String filePath,String s){
         File file = new File(filePath);
-        file.canWrite();
         if (file.exists()){
             System.out.println("we are overwriting the file " + filePath);
         }else{
@@ -26,7 +25,6 @@ public class WriterAndReader {
 
     public void read(String filePath){
         File file = new File(filePath);
-        file.canExecute();
         try (
 
                 FileReader reader = new FileReader(filePath);
